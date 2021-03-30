@@ -1,1 +1,81 @@
-Estamos en la HOME de componentes, actualizame
+<!doctype html>
+<html>
+<head>
+    <title>Neochess</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@neochess/components@0.0.6/dist/neochess-components.bundle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .control-panel {
+            margin-bottom: 15px;
+        }
+
+        button {
+            display: inline-block;
+            width: 40px;
+            height: 28px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        neochess-board {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="control-panel">
+        <button onclick="startNew();"><ion-icon name="add"></ion-icon></button>
+        <button onclick="toggleFlip();"><ion-icon name="refresh"></ion-icon></button>
+        <button onclick="goToFirst();"><ion-icon name="play-skip-back"></ion-icon></button>
+        <button onclick="goToPrevious();"><ion-icon style="transform: rotate(180deg)" name="play"></ion-icon></button>
+        <button onclick="goToNext();"><ion-icon name="play"></ion-icon></button>
+        <button onclick="goToLast();"><ion-icon name="play-skip-forward"></ion-icon></button>
+    </div>
+    <neochess-board></neochess-board>
+</div>
+</body>
+<script>
+    function getBoard() {
+        return document.querySelector('neochess-board');
+    }
+
+    function startNew() {
+        getBoard().match.startNew();
+    }
+
+    function goToPrevious() {
+        getBoard().match.goToPreviousPosition();
+    }
+
+    function goToNext() {
+        getBoard().match.goToNextPosition();
+    }
+
+    function goToFirst() {
+        getBoard().match.goToStartPosition();
+    }
+
+    function goToLast() {
+        getBoard().match.goToCurrentPosition();
+    }
+
+    function toggleFlip() {
+        getBoard().flipped = !getBoard().flipped;
+    }
+</script>
+</html>
