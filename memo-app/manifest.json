@@ -1,8 +1,8 @@
 {
   "short_name": "Memo App",
   "name": "Simple Memo App",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#6eb5b5",
   "background_color": "#f0ffff",

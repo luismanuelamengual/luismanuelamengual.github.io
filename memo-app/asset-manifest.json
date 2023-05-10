@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/memo-app/static/css/main.921d894b.css",
-    "main.js": "/memo-app/static/js/main.d196c2cc.js",
+    "main.js": "/memo-app/static/js/main.a23fc84f.js",
     "service-worker.js": "/memo-app/service-worker.js",
     "index.html": "/memo-app/index.html",
     "main.921d894b.css.map": "/memo-app/static/css/main.921d894b.css.map",
-    "main.d196c2cc.js.map": "/memo-app/static/js/main.d196c2cc.js.map"
+    "main.a23fc84f.js.map": "/memo-app/static/js/main.a23fc84f.js.map"
   },
   "entrypoints": [
     "static/css/main.921d894b.css",
-    "static/js/main.d196c2cc.js"
+    "static/js/main.a23fc84f.js"
   ]
 }
